@@ -6,13 +6,16 @@
 # LICENSE file in the root directory of this source tree.
 
 import os
+
+from .regexp_tokenizer import RegexpTokenizer
+
 from ..tokenizers import CoreNLPTokenizer
 from ..retriever import TfidfDocRanker
 from ..retriever import DocDB
 from .. import DATA_DIR
 
 DEFAULTS = {
-    'tokenizer': CoreNLPTokenizer,
+    'tokenizer': RegexpTokenizer,
     'ranker': TfidfDocRanker,
     'db': DocDB,
     'reader_model': os.path.join(DATA_DIR, 'reader/multitask.mdl'),
