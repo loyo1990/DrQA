@@ -7,9 +7,7 @@
 
 import os
 
-from .regexp_tokenizer import RegexpTokenizer
-
-from ..tokenizers import CoreNLPTokenizer
+from ..tokenizers import CoreNLPTokenizer,RegexpTokenizer
 from ..retriever import TfidfDocRanker
 from ..retriever import DocDB
 from .. import DATA_DIR
