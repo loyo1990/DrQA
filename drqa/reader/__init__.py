@@ -7,11 +7,14 @@
 
 import os
 from ..tokenizers import CoreNLPTokenizer
+
+from .regexp_tokenizer import RegexpTokenizer
+
 from .. import DATA_DIR
 
 
 DEFAULTS = {
-    'tokenizer': CoreNLPTokenizer,
+    'tokenizer': RegexpTokenizer,
     'model': os.path.join(DATA_DIR, 'reader/single.mdl'),
 }
 
